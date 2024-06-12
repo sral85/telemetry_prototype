@@ -1,0 +1,21 @@
+[package]
+name = "telemetry_prototype"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = {version = "0.7.5"}
+metrics = "0.23.0"
+metrics-exporter-prometheus = "0.15.0"
+opentelemetry = {version = "0.23.0"}
+opentelemetry-otlp = {version = "0.16.0", features = ["tls-roots"] }
+opentelemetry_sdk = {version = "0.23.0", features = ["rt-tokio"] }
+serde = {version = "1.0.203", features = ["derive"] }
+tokio = {version="1.38.0", features=["full"]}
+tonic = {version="0.11.0"}
+tower = {version="0.4.13", features = ["full"] }
+tower-http = {version="0.5.2", features = ["full"] }
+tracing = {version="0.1.40"}
+tracing-opentelemetry = {version="0.24.0"}
+tracing-panic = {version="0.1.2"}
+tracing-subscriber = {version="0.3.18", default-features = true, features = ["fmt", "json", "env-filter"] }
